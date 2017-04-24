@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Looping Exercises: Problem 6</title>
+</head>
+<body>
+	<script>
+		// Alert message prompting user to pick a number.
+		var newGame = alert("Hello! Pick a number between 1 and 100. Once you have chosen a number, click Ok to continue");
+		// Providing the user instructions.
+		alert("The computer is about to start guessing. If the number is too high, enter \"H\". If the number is too low, enter \"L\" If the number is correct, enter \"Y\" to start a new game.")
+		// Set a min and max value for the guessing range.
+		var min = 0
+		var max = 100
+		while(answer !== "Y"){ //Set a while loop to loop until answer is correct (equal to "Y").
+			var avg = Math.floor((max + min)/2); //Created a variable that continues to recalculate the average number of the min and max.
+			var answer = prompt("Is your number " + avg + " ?"); //Created an answer variable to hold the user's guess each loop.
+			if(answer === "H"){
+				max = avg; // Re-setting the max vaalue if guess is too high.
+			} else if(answer === "L"){
+				min = avg; // Re-setting the min vaalue if guess is too low.
+			} else if(answer === "Y"){
+				alert("Good game! Let's play again. Pick another number and re-load page to start.");
+			} else {
+				alert("That's not a valid value. Remember to enter \"H\" for too high, \"L\" for too low, and \"Y\" for yes. Re-load to try again.");
+			}
+		}
+	</script>
+</body>
+</html>

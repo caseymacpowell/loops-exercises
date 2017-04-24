@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Looping Exercises: Problem 3</title>
+</head>
+<body>
+	<script>
+
+var board = "" // Created a variable with an empty string for the pattern to live in.
+var size = 8 // Set a size variable so the grid size can change and the pattern will remain the same.
+
+for(var y = 0; y < size; y++){ // Set a for loop for the y axis.
+	for(var x = 0; x < size; x++){ // Set a for loop for the x axis.
+    if((x + y) % 2 !== 0){ // x + x = current position on the grid. Use of the modulo shows which positions are odd.
+      board += "#"; // For odd positions, "#" is added to the board variable.
+    } else{
+      board += " "; // For even positions, " " is added to the board variable.
+    }
+  } 
+  board += "\n"; // Once each inside loop has run, there needs to be a newline before the first loop begins again.
+}
+console.log(board);
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Looping Exercises: Problem 4</title>
+</head>
+<body>
+	<script>
+		var j = 0 // Created a variable where factors of 3 and 5 could be continuously added.
+		for(var i = 1500; i >= 0; i--){ //Created a for loop to decrement by 1 from 1500.
+			if(i % 3 === 0 || i % 5 === 0){ // Used modulo to find factors of 3 OR 5.
+				j += i; // Added i to j when it was a factor of 3 OR 5.
+			}
+		}
+		console.log(j); // Logged the final sum.
+
+	</script>
+</body>
+</html>

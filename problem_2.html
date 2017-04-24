@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Looping Exercises: Problem 2</title>
+</head>
+<body>
+	<script>
+
+// First Variation 
+	for(var number = 1; number <= 100; number++){ // Set for loop to count from 1 to 100 by increments of 1. 
+		if(number % 3 === 0 && number % 5 !== 0){ // Set an if statement to find any factor of 3 that isn't also a factor of 5. 
+			console.log("Fizz"); // Logged "Fizz" to the console in place of those factors. 
+		} else if(number % 5 === 0){ // Set an else if statement to find factors of 5.
+			console.log("Buzz"); // Logged "Buzz" to the console in place of those factors.
+		} else{ // Set an else statement to log all remaining numbers as is.
+			console.log(number);
+		}
+	} 
+
+// Second Variation 
+	for(var number = 1; number <= 100; number++){ // Set the for loop to count from 1 to 100 by increments of 1.
+		if(number % 3 === 0){ // Created an if statement inside of an if statement to find factors of three. If they were also factors of 5, "FizzBuzz" is logged, otherwise just "Fizz" is logged.
+			if(number % 5 === 0){
+				console.log("FizzBuzz");
+			} else {
+				console.log("Fizz");
+			}
+		} else if (number % 5 === 0){ // Created an else if statement to account for factors of 5 that aren't also factors of 3.
+			console.log("Buzz");
+		} else console.log(number); // Logged all other numbers to console as is.
+	}
+
+	</script>
+</body>
+</html>
